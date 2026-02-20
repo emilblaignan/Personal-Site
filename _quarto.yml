@@ -3,6 +3,7 @@ project:
   output-dir: docs  # Important for GitHub Pages
   resources:
     - data/portfolio-performance.json
+    - CNAME
 
 website:
   title: "Emil Blaignan"
