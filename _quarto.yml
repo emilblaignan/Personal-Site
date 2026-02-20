@@ -8,6 +8,7 @@ website:
   title: "Emil Blaignan"
   site-url: "https://emilblaignan.com"
   description: "Emil Blaignan - Mathematics/Economics student at UCLA specializing in quantitative finance, portfolio management, and term structure forecasting."
+  favicon: favicon.ico
   navbar:
     left:
       - href: index.qmd
