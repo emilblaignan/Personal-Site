@@ -19,9 +19,9 @@ website:
       - personal.qmd
     right:
       - icon: github
-        href: https://github.com/emilblaignan
+        href: https://github.com/emilblaignan  
       - icon: linkedin
-        href: https://www.linkedin.com/in/emil-blaignan/
+        href: https://www.linkedin.com/in/emil-blaignan/  
 
 format:
   html:
@@ -29,4 +29,3 @@ format:
       - cosmo
       - brand
     css: styles.css
-    include-after-body: _darkmode.html

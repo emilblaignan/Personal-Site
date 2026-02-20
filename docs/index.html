@@ -100,10 +100,6 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./portfolio.html"> 
-<span class="menu-text">Portfolio</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
@@ -161,8 +157,8 @@ ul.task-list li input[type="checkbox"] {
   <div class="about-contents"><main class="content" id="quarto-document-content">
 <section id="about-me" class="level2">
 <h2 data-anchor-id="about-me">About Me</h2>
-<p>Hi, I am a third-year undergraduate student at UCLA majoring in Mathematics/Economics B.S. with a specialization in Computing. My intellectual pursuits center on quantitative finance (fixed-income breadth), ML-driven macroeconomic forecasting, and numerical optimization. I have also worked on projects involving time-series forecasting of Treasury yields, portfolio optimization/risk, and econometric analysis of monetary policy. See the <a href="./projects.html">Projects</a> section for more details. I am particularly interested in fixed-income analysis and portfolio management and am keen to see how financial mathematics and deep learning can improve these areas.</p>
-<p>Outside academics, I enjoy photography, hiking, music production, and movies. See the <a href="./personal.html">Personal</a> section for more details.</p>
+<p>I am a fourth-year Mathematics/Economics student at UCLA, specializing in Computing. My research and technical work focus on quantitative portfolio management and term structure forecasting, with a specific interest in distribution-aware modeling and robust multi-asset allocation.</p>
+<p>Recently, I have developed frameworks for efficient term-structure forecasting within rate-cut regimes and conducted explanatory macro-factor analyses (details available in my <a href="./projects.html">Projects</a> section). I am passionate about leveraging the intersection of financial mathematics and deep learning to advance fixed-income analysis. Beyond the terminal, I am an avid hiker.</p>
 </section>
 <section id="contact" class="level2">
 <h2 data-anchor-id="contact">Contact</h2>
@@ -173,6 +169,48 @@ ul.task-list li input[type="checkbox"] {
 </main></div>
 </div>
  <!-- /main -->
+<script>
+  (function() {
+    // Apply saved theme immediately to avoid flash
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark') {
+      document.documentElement.classList.add('dark-mode-pending');
+    }
+  })();
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Inject button into navbar right side
+    const navbarRight = document.querySelector('.navbar-nav.ms-auto, .navbar-collapse .navbar-nav:last-child, #quarto-header .navbar-nav');
+    const btn = document.createElement('button');
+    btn.id = 'dark-mode-toggle';
+    btn.setAttribute('aria-label', 'Toggle dark mode');
+
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark') {
+      document.body.classList.add('dark-mode');
+      btn.textContent = 'Light';
+    } else {
+      btn.textContent = 'Dark';
+    }
+
+    // Insert after the navbar icons
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    if (navbarCollapse) {
+      navbarCollapse.appendChild(btn);
+    } else {
+      const navbar = document.querySelector('.navbar');
+      if (navbar) navbar.appendChild(btn);
+    }
+
+    btn.addEventListener('click', function() {
+      document.body.classList.toggle('dark-mode');
+      const isDark = document.body.classList.contains('dark-mode');
+      btn.textContent = isDark ? 'Light' : 'Dark';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  });
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

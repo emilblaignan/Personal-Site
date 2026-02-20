@@ -1,22 +1,456 @@
-/* css styles */
-/* Navbar hover effect with animated underline */
+/* =============================================
+   BRUTALIST TEXT AESTHETIC — Emil Blaignan
+   Font: Times New Roman (system font)
+   Layout unchanged; typography + palette only.
+   Dark mode toggle via #dark-mode-toggle button.
+   To revert: cp styles_backup.css → styles.css
+              cp _quarto_backup.yml → _quarto.yml
+   ============================================= */
+
+/* === LIGHT MODE VARIABLES === */
+:root {
+  --bg: #ffffff;
+  --fg: #0a0a0a;
+  --muted: #555555;
+  --accent-line: #0a0a0a;
+  --nav-bg: #ffffff;
+  --nav-fg: #0a0a0a;
+  --nav-border: #0a0a0a;
+  --card-bg: #ffffff;
+  --hr-color: #0a0a0a;
+  --font-body: Arial, Helvetica, sans-serif;
+}
+
+/* === DARK MODE VARIABLES === */
+body.dark-mode {
+  --bg: #0a0a0a;
+  --fg: #f0f0f0;
+  --muted: #aaaaaa;
+  --accent-line: #f0f0f0;
+  --nav-bg: #0a0a0a;
+  --nav-fg: #f0f0f0;
+  --nav-border: #f0f0f0;
+  --card-bg: #111111;
+  --hr-color: #f0f0f0;
+}
+
+/* === BASE === */
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.7;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* === TYPOGRAPHY === */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-body);
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+  color: var(--fg);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 1.9rem; border-bottom: 1.5px solid var(--accent-line); padding-bottom: 0.3rem; }
+h3 { font-size: 1.4rem; }
+
+p {
+  font-family: var(--font-body);
+  color: var(--fg);
+  margin-bottom: 1.1rem;
+}
+
+li, td, th, label, input, textarea, select, blockquote, figcaption {
+  font-family: var(--font-body);
+  color: var(--fg);
+}
+
+a {
+  font-family: var(--font-body);
+  color: var(--fg);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  opacity: 0.55;
+}
+
+strong { font-weight: bold; }
+em { font-style: italic; }
+
+/* === NAVBAR === */
+.navbar {
+  background-color: var(--nav-bg) !important;
+  border-bottom: 1.5px solid var(--nav-border) !important;
+  font-family: var(--font-body) !important;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.navbar-brand {
+  color: var(--nav-fg) !important;
+  font-family: var(--font-body) !important;
+  font-weight: normal !important;
+  font-size: 1.05rem !important;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 .navbar-nav .nav-link {
+  color: var(--nav-fg) !important;
+  font-family: var(--font-body) !important;
+  font-weight: normal !important;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   position: relative;
-  text-decoration: none;
+  text-decoration: none !important;
+  padding-bottom: 2px !important;
 }
 
 .navbar-nav .nav-link::after {
   content: '';
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 1.5px;
   bottom: 0;
   left: 50%;
-  background-color: currentColor;
-  transition: width 0.3s ease;
+  background-color: var(--nav-fg);
+  transition: width 0.25s ease;
   transform: translateX(-50%);
 }
 
 .navbar-nav .nav-link:hover::after {
   width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+  opacity: 0.55;
+}
+
+/* === DARK MODE TOGGLE BUTTON === */
+#dark-mode-toggle {
+  background: none;
+  border: 1px solid var(--nav-fg);
+  color: var(--nav-fg);
+  font-family: var(--font-body);
+  font-weight: normal;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.2rem 0.6rem;
+  cursor: pointer;
+  margin-left: 0.75rem;
+  transition: background 0.2s, color 0.2s;
+  vertical-align: middle;
+}
+
+#dark-mode-toggle:hover {
+  background: var(--nav-fg);
+  color: var(--nav-bg);
+}
+
+/* === HR === */
+hr {
+  border: none;
+  border-top: 1.5px solid var(--hr-color);
+  margin: 2rem 0;
+  opacity: 1;
+}
+
+/* === BLOG LISTING === */
+.listing-title {
+  font-family: var(--font-body) !important;
+  font-weight: normal !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  color: var(--fg) !important;
+}
+
+.listing-date, .listing-reading-time {
+  font-family: var(--font-body) !important;
+  color: var(--muted) !important;
+  font-size: 0.9rem;
+}
+
+.listing-description {
+  font-family: var(--font-body) !important;
+  color: var(--fg) !important;
+  font-size: 0.95rem;
+}
+
+/* Catch all listing text in dark mode */
+body.dark-mode .quarto-listing *,
+body.dark-mode .listing-title,
+body.dark-mode .listing-description,
+body.dark-mode .listing-date,
+body.dark-mode .listing-author,
+body.dark-mode .listing-reading-time,
+body.dark-mode .quarto-post *,
+body.dark-mode a.listing-title,
+body.dark-mode .quarto-listing a {
+  color: var(--fg) !important;
+}
+
+body.dark-mode .listing-date,
+body.dark-mode .listing-reading-time,
+body.dark-mode .listing-author {
+  color: var(--muted) !important;
+}
+
+/* === PAGE HERO / TITLE BANNER === */
+/* The grey banner Quarto renders behind page titles */
+.quarto-title-banner,
+.quarto-title-banner .quarto-title,
+#title-block-header {
+  background-color: var(--bg) !important;
+  color: var(--fg) !important;
+}
+
+body.dark-mode .quarto-title-banner,
+body.dark-mode #title-block-header {
+  background-color: var(--bg) !important;
+}
+
+/* === ALL BACKGROUND SURFACES === */
+/* Catch any white/light surfaces Quarto renders */
+body.dark-mode #quarto-content,
+body.dark-mode .quarto-container,
+body.dark-mode main,
+body.dark-mode .page-layout-full,
+body.dark-mode .page-layout-article,
+body.dark-mode #quarto-document-content,
+body.dark-mode .tab-content,
+body.dark-mode .panel-tabset,
+body.dark-mode .sidebar,
+body.dark-mode #quarto-sidebar,
+body.dark-mode .quarto-listing,
+body.dark-mode .list.quarto-listing-default,
+body.dark-mode .quarto-grid,
+body.dark-mode .quarto-post,
+body.dark-mode .post-image,
+body.dark-mode .quarto-about-trestles,
+body.dark-mode .quarto-about-jolla {
+  background-color: var(--bg) !important;
+  color: var(--fg) !important;
+}
+
+/* Input / select boxes in dark mode */
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+  background-color: #1a1a1a !important;
+  color: var(--fg) !important;
+  border-color: #444 !important;
+}
+
+/* === CARDS === */
+.card {
+  background-color: var(--card-bg) !important;
+  color: var(--fg) !important;
+  border-color: var(--fg) !important;
+}
+
+.card * {
+  color: var(--fg) !important;
+  font-family: var(--font-body) !important;
+}
+
+/* Card body, footer, and all sub-sections */
+.card-body,
+.card-footer,
+.card-img-overlay,
+.card-header {
+  background-color: var(--card-bg) !important;
+  color: var(--fg) !important;
+}
+
+/* Dark mode: card surfaces fully black */
+body.dark-mode .card,
+body.dark-mode .card-body,
+body.dark-mode .card-footer,
+body.dark-mode .card-header {
+  background-color: #0a0a0a !important;
+  border-color: #333 !important;
+}
+
+/* === PROJECT CARD TITLES (keep white in both modes) === */
+.card .card-title,
+.card .listing-title,
+.card h5,
+.card h4,
+.card h3 {
+  color: #ffffff !important;
+}
+
+/* === TAG BADGES on project cards === */
+/* Light mode: outline only, dark text */
+.badge,
+.listing-category,
+span.badge {
+  color: var(--fg) !important;
+  background-color: transparent !important;
+  border: 1px solid var(--fg) !important;
+  font-family: var(--font-body) !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.05em;
+  border-radius: 999px !important;
+}
+
+/* Dark mode: outline only, light text */
+body.dark-mode .badge,
+body.dark-mode .listing-category,
+body.dark-mode span.badge {
+  color: #f0f0f0 !important;
+  background-color: transparent !important;
+  border: 1px solid #f0f0f0 !important;
+}
+
+/* Dark mode: .tag class used in projects.qmd */
+body.dark-mode .tag {
+  color: #f0f0f0 !important;
+  background-color: transparent !important;
+  border-color: #f0f0f0 !important;
+}
+
+body.dark-mode .tag.green {
+  color: #f0f0f0 !important;
+  border-color: #f0f0f0 !important;
+}
+
+body.dark-mode .tag:hover,
+body.dark-mode .tag.green:hover {
+  background-color: #f0f0f0 !important;
+  color: #0a0a0a !important;
+}
+
+/* === PROJECT LINK BUTTONS (GitHub, PDF Report etc) === */
+/* Outline only, no fill, in both modes */
+.card .btn,
+.card a.btn,
+.card .btn-primary,
+.card .btn-secondary,
+.card .btn-success,
+.card .btn-dark {
+  background-color: transparent !important;
+  border: 1.5px solid var(--fg) !important;
+  color: var(--fg) !important;
+  border-radius: 999px !important;
+  font-family: var(--font-body) !important;
+  font-size: 0.85rem !important;
+  letter-spacing: 0.05em;
+  box-shadow: none !important;
+}
+
+.card .btn:hover,
+.card a.btn:hover {
+  background-color: var(--fg) !important;
+  color: var(--bg) !important;
+}
+
+body.dark-mode .card .btn,
+body.dark-mode .card a.btn {
+  border-color: #f0f0f0 !important;
+  color: #f0f0f0 !important;
+}
+
+body.dark-mode .card .btn:hover,
+body.dark-mode .card a.btn:hover {
+  background-color: #f0f0f0 !important;
+  color: #0a0a0a !important;
+}
+
+/* === PROJECT CARD DATE FOOTER === */
+.card-footer,
+.listing-date-footer,
+.card .card-footer p,
+.card .card-footer span {
+  color: var(--muted) !important;
+}
+
+body.dark-mode .card-footer,
+body.dark-mode .card .card-footer p,
+body.dark-mode .card .card-footer span {
+  color: var(--muted) !important;
+  background-color: #111 !important;
+}
+
+/* === ABOUT PAGE === */
+.about-links .about-link {
+  font-family: var(--font-body) !important;
+  font-weight: normal !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+}
+
+/* === BUTTONS === */
+.btn-primary {
+  font-family: var(--font-body) !important;
+  font-weight: normal !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  border-radius: 0 !important;
+}
+
+/* === MUTED / SECONDARY TEXT === */
+.text-muted, small, .small {
+  color: var(--muted) !important;
+  font-family: var(--font-body) !important;
+}
+
+/* === CODE === */
+code {
+  font-size: 0.88em;
+  background-color: #f0f0f0;
+  color: var(--fg);
+}
+
+body.dark-mode code {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+/* === DARK MODE GLOBAL CATCH-ALL === */
+body.dark-mode,
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode li,
+body.dark-mode span,
+body.dark-mode div,
+body.dark-mode td,
+body.dark-mode th,
+body.dark-mode label,
+body.dark-mode figcaption,
+body.dark-mode blockquote {
+  color: var(--fg);
+}
+
+body.dark-mode a {
+  color: var(--fg) !important;
+}
+
+body.dark-mode .text-muted,
+body.dark-mode small {
+  color: var(--muted) !important;
+}
+
+/* === SELECTION === */
+::selection {
+  background: var(--fg);
+  color: var(--bg);
 }

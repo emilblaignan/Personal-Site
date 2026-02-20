@@ -95,28 +95,31 @@ title-block-banner: true
 
 .tag {
   display: inline-block;
-  background-color: var(--light-bg);
-  color: var(--secondary-color);
-  padding: 0.3rem 0.8rem;  /* Slightly reduced padding */
-  border-radius: 18px;  /* Slightly smaller border radius */
-  font-size: 0.75rem;  /* Slightly smaller font */
+  background-color: transparent;
+  color: var(--dark-text);
+  border: 1.5px solid var(--dark-text);
+  padding: 0.3rem 0.8rem;
+  border-radius: 18px;
+  font-size: 0.75rem;
   font-weight: 600;
-  margin: 2px;  /* Reduced margin */
+  margin: 2px;
   transition: all 0.2s ease;
 }
 
 .tag.green {
   color: var(--green-secondary);
+  border-color: var(--green-secondary);
 }
 
 .tag:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--dark-text);
   color: white;
   transform: scale(1.05);
 }
 
 .tag.green:hover {
   background-color: var(--green-secondary);
+  color: white;
 }
 
 .card-description {
@@ -274,7 +277,6 @@ March 20<sup>th</sup>, 2025
 <span class="tag green">R</span>
 <span class="tag green">ECONOMETRICS</span>
 <span class="tag green">BORUTA</span>
-<span class="tag green">REGRESSION</span>
 :::
 
 ::: {.card-description}

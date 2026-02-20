@@ -21,7 +21,7 @@ As a quantitative finance enthusiast with a focus on fixed-income markets and ma
 </div>
 
 <div style="margin-top: 2rem; border-top: 1px solid #eaeaea; padding-top: 1rem;">
-  <p>Last updated: April 2025</p>
+  <p>Last updated: January 2026</p>
 
 <div style="text-align: center; margin: 2rem 0;">
   <a href="Emil Blaignan Resume UCLA (Quant).pdf" class="btn btn-primary btn-lg" target="_blank">
