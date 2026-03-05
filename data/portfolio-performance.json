@@ -1,82 +1,82 @@
 {
-  "timestamp": "2026-03-04T03:10:08.943164Z",
-  "lastUpdated": "3/4/2026, 3:10:08 AM",
+  "timestamp": "2026-03-05T03:12:59.231758Z",
+  "lastUpdated": "3/5/2026, 3:12:59 AM",
   "startDate": "2026-01-01",
-  "currentDate": "2026-03-03",
+  "currentDate": "2026-03-04",
   "dailySnapshot": {
     "portfolio": {
-      "performance": 2.55,
+      "performance": 2.8,
       "stocks": [
         {
           "ticker": "PGR",
           "weight": 0.2703,
-          "price": 213.35,
-          "ytdChange": 0.58
+          "price": 211.4,
+          "ytdChange": -0.34
         },
         {
           "ticker": "IAU",
           "weight": 0.2394,
-          "price": 95.92,
-          "ytdChange": 17.61
+          "price": 96.65,
+          "ytdChange": 18.5
         },
         {
           "ticker": "JPM",
           "weight": 0.0368,
-          "price": 300.26,
-          "ytdChange": -7.33
+          "price": 299.39,
+          "ytdChange": -7.6
         },
         {
           "ticker": "CAT",
           "weight": 0.0293,
-          "price": 722.18,
-          "ytdChange": 20.97
+          "price": 731.97,
+          "ytdChange": 22.61
         },
         {
           "ticker": "NVDA",
           "weight": 0.1229,
-          "price": 180.05,
-          "ytdChange": -4.66
+          "price": 183.04,
+          "ytdChange": -3.08
         },
         {
           "ticker": "MSFT",
           "weight": 0.0554,
-          "price": 403.93,
-          "ytdChange": -14.4
+          "price": 405.2,
+          "ytdChange": -14.13
         },
         {
           "ticker": "COST",
           "weight": 0.0414,
-          "price": 1007.77,
-          "ytdChange": 17.94
+          "price": 1006.74,
+          "ytdChange": 17.82
         },
         {
           "ticker": "NOW",
           "weight": 0.0551,
-          "price": 113.19,
-          "ytdChange": -23.23
+          "price": 113.86,
+          "ytdChange": -22.78
         },
         {
           "ticker": "WMT",
           "weight": 0.1109,
-          "price": 127.91,
-          "ytdChange": 13.44
+          "price": 127.81,
+          "ytdChange": 13.35
         },
         {
           "ticker": "RDDT",
           "weight": 0.0385,
-          "price": 145.69,
-          "ytdChange": -39.77
+          "price": 147.29,
+          "ytdChange": -39.11
         }
       ]
     },
     "benchmark": {
       "ticker": "SPY",
-      "performance": -0.42,
-      "price": 680.33
+      "performance": 0.29,
+      "price": 685.13
     },
     "riskFree": {
       "name": "SOFR",
-      "rate": 4.41
+      "rate": 3.7
     }
   },
   "timeSeriesData": {
@@ -120,7 +120,8 @@
       "2026-02-26",
       "2026-02-27",
       "2026-03-02",
-      "2026-03-03"
+      "2026-03-03",
+      "2026-03-04"
     ],
     "portfolio": [
       1.01,
@@ -162,7 +163,8 @@
       2.8,
       2.83,
       3.58,
-      2.55
+      2.55,
+      2.8
     ],
     "benchmark": [
       0.67,
@@ -204,49 +206,51 @@
       0.9,
       0.41,
       0.47,
-      -0.42
+      -0.42,
+      0.29
     ],
     "sofr_rates_pct": [
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41,
-      4.41
+      3.7,
+      3.66,
+      3.65,
+      3.64,
+      3.64,
+      3.64,
+      3.65,
+      3.64,
+      3.66,
+      3.65,
+      3.64,
+      3.63,
+      3.64,
+      3.65,
+      3.66,
+      3.66,
+      3.64,
+      3.65,
+      3.68,
+      3.69,
+      3.69,
+      3.65,
+      3.65,
+      3.64,
+      3.63,
+      3.65,
+      3.65,
+      3.65,
+      3.66,
+      3.71,
+      3.73,
+      3.67,
+      3.66,
+      3.66,
+      3.67,
+      3.67,
+      3.67,
+      3.68,
+      3.71,
+      3.7,
+      3.7
     ]
   }
 }
