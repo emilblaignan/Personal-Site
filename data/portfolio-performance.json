@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-03-21T03:06:02.593308Z",
-  "lastUpdated": "3/21/2026, 3:06:02 AM",
+  "timestamp": "2026-03-22T03:24:23.636408Z",
+  "lastUpdated": "3/22/2026, 3:24:23 AM",
   "startDate": "2026-01-01",
   "currentDate": "2026-03-20",
   "dailySnapshot": {
     "portfolio": {
-      "performance": -3.6,
+      "performance": -3.58,
       "stocks": [
         {
           "ticker": "PGR",
@@ -59,7 +59,7 @@
           "ticker": "WMT",
           "weight": 0.1109,
           "price": 119.02,
-          "ytdChange": 5.55
+          "ytdChange": 5.77
         },
         {
           "ticker": "RDDT",
@@ -71,7 +71,7 @@
     },
     "benchmark": {
       "ticker": "SPY",
-      "performance": -5.06,
+      "performance": -4.81,
       "price": 648.57
     },
     "riskFree": {
@@ -188,7 +188,7 @@
       0.58,
       -1.29,
       -2.49,
-      -3.6
+      -3.58
     ],
     "benchmark": [
       0.67,
@@ -243,7 +243,7 @@
       -1.81,
       -3.18,
       -3.42,
-      -5.06
+      -4.81
     ],
     "sofr_rates_pct": [
       3.7,
