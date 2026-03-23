@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-03-22T03:24:23.636408Z",
-  "lastUpdated": "3/22/2026, 3:24:23 AM",
+  "timestamp": "2026-03-23T03:27:35.805256Z",
+  "lastUpdated": "3/23/2026, 3:27:35 AM",
   "startDate": "2026-01-01",
   "currentDate": "2026-03-20",
   "dailySnapshot": {
     "portfolio": {
-      "performance": -3.58,
+      "performance": -3.56,
       "stocks": [
         {
           "ticker": "PGR",
@@ -34,14 +34,14 @@
         {
           "ticker": "NVDA",
           "weight": 0.1229,
-          "price": 172.7,
-          "ytdChange": -8.55
+          "price": 172.93,
+          "ytdChange": -8.43
         },
         {
           "ticker": "MSFT",
           "weight": 0.0554,
-          "price": 381.87,
-          "ytdChange": -19.07
+          "price": 381.85,
+          "ytdChange": -19.08
         },
         {
           "ticker": "COST",
@@ -188,7 +188,7 @@
       0.58,
       -1.29,
       -2.49,
-      -3.58
+      -3.56
     ],
     "benchmark": [
       0.67,
