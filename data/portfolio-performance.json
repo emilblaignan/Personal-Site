@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-04-03T03:31:56.623750Z",
-  "lastUpdated": "4/3/2026, 3:31:56 AM",
+  "timestamp": "2026-04-04T03:20:24.458662Z",
+  "lastUpdated": "4/4/2026, 3:20:24 AM",
   "startDate": "2026-01-01",
   "currentDate": "2026-04-02",
   "dailySnapshot": {
     "portfolio": {
-      "performance": -3.25,
+      "performance": -3.23,
       "stocks": [
         {
           "ticker": "PGR",
           "weight": 0.2703,
           "price": 195.25,
-          "ytdChange": -7.95
+          "ytdChange": -7.91
         },
         {
           "ticker": "IAU",
@@ -206,7 +206,7 @@
       -5.15,
       -3.21,
       -3.22,
-      -3.25
+      -3.23
     ],
     "benchmark": [
       0.67,
