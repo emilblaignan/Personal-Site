@@ -1,78 +1,78 @@
 {
-  "timestamp": "2026-05-12T04:12:28.870327Z",
-  "lastUpdated": "5/12/2026, 4:12:28 AM",
+  "timestamp": "2026-05-13T04:27:52.685537Z",
+  "lastUpdated": "5/13/2026, 4:27:52 AM",
   "startDate": "2026-01-01",
-  "currentDate": "2026-05-11",
+  "currentDate": "2026-05-12",
   "dailySnapshot": {
     "portfolio": {
-      "performance": 1.95,
+      "performance": 2.1,
       "stocks": [
         {
           "ticker": "PGR",
           "weight": 0.2703,
-          "price": 196.91,
-          "ytdChange": -7.12
+          "price": 198.42,
+          "ytdChange": -6.41
         },
         {
           "ticker": "IAU",
           "weight": 0.2394,
-          "price": 89.06,
-          "ytdChange": 9.2
+          "price": 88.71,
+          "ytdChange": 8.77
         },
         {
           "ticker": "JPM",
           "weight": 0.0368,
-          "price": 300.0,
-          "ytdChange": -6.94
+          "price": 304.88,
+          "ytdChange": -5.43
         },
         {
           "ticker": "CAT",
           "weight": 0.0293,
-          "price": 926.79,
-          "ytdChange": 55.53
+          "price": 912.14,
+          "ytdChange": 53.07
         },
         {
           "ticker": "NVDA",
           "weight": 0.1229,
-          "price": 219.44,
-          "ytdChange": 16.2
+          "price": 220.78,
+          "ytdChange": 16.91
         },
         {
           "ticker": "MSFT",
           "weight": 0.0554,
-          "price": 412.66,
-          "ytdChange": -12.55
+          "price": 407.77,
+          "ytdChange": -13.58
         },
         {
           "ticker": "COST",
           "weight": 0.0414,
-          "price": 999.47,
-          "ytdChange": 17.3
+          "price": 1021.88,
+          "ytdChange": 19.93
         },
         {
           "ticker": "NOW",
           "weight": 0.0551,
-          "price": 91.49,
-          "ytdChange": -37.95
+          "price": 89.0,
+          "ytdChange": -39.64
         },
         {
           "ticker": "WMT",
           "weight": 0.1109,
-          "price": 127.59,
-          "ytdChange": 13.6
+          "price": 130.35,
+          "ytdChange": 16.06
         },
         {
           "ticker": "RDDT",
           "weight": 0.0385,
-          "price": 159.51,
-          "ytdChange": -34.06
+          "price": 152.35,
+          "ytdChange": -37.02
         }
       ]
     },
     "benchmark": {
       "ticker": "SPY",
-      "performance": 8.51,
-      "price": 739.3
+      "performance": 8.35,
+      "price": 738.18
     },
     "riskFree": {
       "name": "SOFR",
@@ -168,7 +168,8 @@
       "2026-05-06",
       "2026-05-07",
       "2026-05-08",
-      "2026-05-11"
+      "2026-05-11",
+      "2026-05-12"
     ],
     "portfolio": [
       1.01,
@@ -258,7 +259,8 @@
       1.41,
       1.72,
       1.37,
-      1.95
+      1.95,
+      2.1
     ],
     "benchmark": [
       0.67,
@@ -348,7 +350,8 @@
       7.71,
       7.38,
       8.27,
-      8.51
+      8.51,
+      8.35
     ],
     "sofr_rates_pct": [
       3.7,
@@ -436,6 +439,7 @@
       3.63,
       3.62,
       3.61,
+      3.6,
       3.6,
       3.6,
       3.6
