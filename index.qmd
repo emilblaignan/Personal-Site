@@ -1,9 +1,10 @@
 ---
 title: "Emil Blaignan"
+page-layout: full
 about:
   template: trestles
   image: profile.jpg
-  image-width: 200px
+  image-width: 260px
   image-shape: rounded
   links:
     - icon: github
@@ -16,10 +17,14 @@ about:
 
 ## About Me
 
-I am a fourth-year Mathematics/Economics student at UCLA, specializing in Computing. My research and technical work focus on quantitative portfolio management and term structure forecasting, with a specific interest in distribution-aware modeling and robust multi-asset allocation.
+I am a recent UCLA graduate in Mathematics/Economics with a specialization in Computing, and an incoming Master of Financial Engineering candidate at UC Berkeley Haas.
 
-Recently, I have developed frameworks for efficient term-structure forecasting within rate-cut regimes and conducted explanatory macro-factor analyses (details available in my [Projects](projects.qmd) section). I am passionate about leveraging the intersection of financial mathematics and deep learning to advance fixed-income analysis. Beyond the terminal, I am an avid hiker.
+At UCLA Anderson, I work on empirical asset pricing research with Valentin Haddad and Tyler Muir. My work has included high-dimensional stochastic discount factor estimation using the Kozak-Nagel-Santosh framework, with a focus on ridge regularization, covariance structure, and out-of-sample portfolio performance. More recently, I have been studying how model complexity affects the investment opportunity set by connecting results on ridgeless and high-dimensional ridge regression with the CKMS framework, examining how attainable Sharpe ratios change as dimensionality grows relative to the available sample.
+
+My technical work has also included term-structure forecasting, portfolio optimization, machine learning, and empirical analysis of financial data, with selected work available in my [Projects](projects.qmd) section.
+
+I also have experience in a client-facing investment role analyzing portfolio products and strategies, which motivated me to move upstream toward research and investment roles where I can contribute directly to how those products and portfolios are built. Beyond research, I am an avid hiker.
 
 ## Contact
 
-Feel free to reach out via [email](mailto:emilblaignan@gmail.com).
+Feel free to reach out via [email](mailto:emilblaignan@berkeley.edu).

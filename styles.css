@@ -207,6 +207,22 @@ body.dark-mode .listing-author {
   color: var(--muted) !important;
 }
 
+/* === ABOUT PAGE (HOME) — HEADSHOT + NAME === */
+.quarto-about-trestles .about-entity {
+  flex: 0 0 45% !important;
+}
+
+.quarto-about-trestles .about-entity h1.title {
+  font-size: 2.4rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .quarto-about-trestles .about-entity h1.title {
+    font-size: 2.4rem;
+  }
+}
+
 /* === PAGE HERO / TITLE BANNER === */
 /* The grey banner Quarto renders behind page titles */
 .quarto-title-banner,

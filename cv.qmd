@@ -1,9 +1,6 @@
  ---
-title: "Curriculum Vitae"
 page-layout: full
 ---
-
-As a quantitative finance enthusiast with a focus on fixed-income markets and macroeconomic modeling, I’m pursuing opportunities in fixed-income asset management, equity research, risk analysis, or quantitative macro.
 
 <div style="text-align: center;">
   
@@ -21,7 +18,7 @@ As a quantitative finance enthusiast with a focus on fixed-income markets and ma
 </div>
 
 <div style="margin-top: 2rem; border-top: 1px solid #eaeaea; padding-top: 1rem;">
-  <p>Last updated: January 2026</p>
+  <p>Last updated: September 2026</p>
 
 <div style="text-align: center; margin: 2rem 0;">
   <a href="Emil Blaignan Resume (1).pdf" class="btn btn-primary btn-lg" target="_blank">

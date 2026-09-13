@@ -1,5 +1,5 @@
 ---
-title: "Projects"
+title: "Research"
 page-layout: full
 title-block-banner: true
 ---
@@ -126,13 +126,99 @@ title-block-banner: true
   color: var(--dark-text);
   font-size: 0.9rem;  /* Slightly reduced from 0.95rem */
   line-height: 1.35;  /* Slightly tighter line height */
-  margin: 0.8rem 0;  /* Reduced margins */
+  margin: 0.8rem 0 0.3rem;  /* Reduced margins */
   display: -webkit-box;
   -webkit-line-clamp: 4;  /* Increased from 3 to show more text */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   flex: 1;
+}
+
+.read-more-link {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0 0 0.6rem;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: center;
+}
+
+.read-more-link:hover {
+  opacity: 0.6;
+}
+
+.info-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+}
+
+.info-overlay.is-open {
+  display: flex;
+}
+
+.info-box {
+  background-color: var(--bg, #fff);
+  color: var(--fg, #0a0a0a);
+  border: 1.5px solid var(--fg, #0a0a0a);
+  border-radius: 8px;
+  max-width: 520px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.info-box-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid var(--fg, #0a0a0a);
+}
+
+.info-box-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.info-box-close {
+  background: none;
+  border: none;
+  color: var(--fg, #0a0a0a);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.info-box-close:hover {
+  opacity: 0.6;
+}
+
+.info-box-body {
+  padding: 1.2rem;
+}
+
+.info-box-body p {
+  color: var(--fg, #0a0a0a);
+  line-height: 1.5;
+  margin: 0;
 }
 
 .button-container {
@@ -232,6 +318,80 @@ title-block-banner: true
 }
 </style>
 
+## Research
+
+At UCLA Anderson, I work on empirical asset pricing research with Valentin Haddad and Tyler Muir, focused on high-dimensional stochastic discount factor estimation and how model complexity affects the investment opportunity set. Selected notes below.
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+::: {.card}
+::: {.card-header}
+## A Variance-Hierarchy Ablation of the KNS Estimator
+:::
+::: {.card-body}
+::: {.card-content}
+![](kns_thumbnail.png){fig-align="center"}
+
+::: {.tags-container}
+<span class="tag">PYTHON</span>
+<span class="tag">ASSET PRICING</span>
+<span class="tag">RIDGE REGULARIZATION</span>
+:::
+
+::: {.card-description}
+Ablation of the Kozak-Nagel-Santosh SDF estimator testing how much its cross-sectional pricing power depends on the covariance eigenvalue hierarchy. A partial-whitening continuum isolates finite-sample regularization from the population Sharpe ratio: whitening leaves the maximal Sharpe ratio invariant, but original-space CV R² collapses from 26.35% to 10.36% as the spectrum flattens, showing the variance hierarchy is load-bearing for the linear ridge estimator.
+:::
+
+<button type="button" class="read-more-link" data-modal-target="#modal-kns">Read more</button>
+:::
+
+::: {.button-container}
+[PDF Notes](KNS_ablation_note.pdf){.btn .btn-dark target="_blank" rel="noopener noreferrer"}
+:::
+:::
+::: {.card-footer}
+May 2026
+:::
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+::: {.card}
+::: {.card-header .green}
+## CKMS Replication and a Complexity Sweep of the Maximal Sharpe Ratio
+:::
+::: {.card-body}
+::: {.card-content}
+![](ckms_thumbnail.png){fig-align="center"}
+
+::: {.tags-container}
+<span class="tag green">PYTHON</span>
+<span class="tag green">RANDOM FEATURES</span>
+<span class="tag green">RIDGE REGRESSION</span>
+:::
+
+::: {.card-description}
+Replicates the CKMS bound on the population maximal Sharpe ratio on a rebuilt JKP equity pipeline, then runs a rolling complexity sweep from 121 linear characteristics to 5,000 random nonlinear features across 517 rolling 240-month windows. Finds a single dominant time-varying level (SVD share ≈ 0.98) with a roughly constant multiplicative gain from added model capacity, and a distinct pattern for mega-cap stocks.
+:::
+
+<button type="button" class="read-more-link" data-modal-target="#modal-ckms">Read more</button>
+:::
+
+::: {.button-container}
+[PDF Notes](ckms_notes.pdf){.btn .btn-green target="_blank" rel="noopener noreferrer"}
+:::
+:::
+::: {.card-footer}
+September 2026
+:::
+:::
+:::
+
+:::
+
+## Projects
+
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
@@ -252,6 +412,8 @@ title-block-banner: true
 ::: {.card-description}
 A quantitative fixed-income analytics toolkit for visualizing, forecasting, and analyzing treasury yields using advanced econometric models. Features Nelson-Siegel-Svensson curve fitting and dynamic term structure analysis.
 :::
+
+<button type="button" class="read-more-link" data-modal-target="#modal-yield">Read more</button>
 :::
 
 ::: {.button-container}
@@ -282,6 +444,8 @@ March 20<sup>th</sup>, 2025
 ::: {.card-description}
 A comprehensive econometric analysis identifying key macroeconomic drivers of S&P 500 returns using Boruta feature selection and multiple regression modeling. Explores non-linear relationships and provides robust statistical inference.
 :::
+
+<button type="button" class="read-more-link" data-modal-target="#modal-macro">Read more</button>
 :::
 
 ::: {.button-container}
@@ -298,3 +462,81 @@ May 29<sup>th</sup>, 2025
 <!-- You can add more cards here in the same pattern -->
 
 :::
+
+<div class="info-overlay" id="modal-kns">
+<div class="info-box">
+<div class="info-box-header">
+<p class="info-box-title">A Variance-Hierarchy Ablation of the KNS Estimator</p>
+<button type="button" class="info-box-close" aria-label="Close">&times;</button>
+</div>
+<div class="info-box-body">
+<p>Ablation of the Kozak-Nagel-Santosh SDF estimator testing how much its cross-sectional pricing power depends on the covariance eigenvalue hierarchy. A partial-whitening continuum isolates finite-sample regularization from the population Sharpe ratio: whitening leaves the maximal Sharpe ratio invariant, but original-space CV R² collapses from 26.35% to 10.36% as the spectrum flattens, showing the variance hierarchy is load-bearing for the linear ridge estimator.</p>
+</div>
+</div>
+</div>
+
+<div class="info-overlay" id="modal-ckms">
+<div class="info-box">
+<div class="info-box-header">
+<p class="info-box-title">CKMS Replication and a Complexity Sweep of the Maximal Sharpe Ratio</p>
+<button type="button" class="info-box-close" aria-label="Close">&times;</button>
+</div>
+<div class="info-box-body">
+<p>Replicates the CKMS bound on the population maximal Sharpe ratio on a rebuilt JKP equity pipeline, then runs a rolling complexity sweep from 121 linear characteristics to 5,000 random nonlinear features across 517 rolling 240-month windows. Finds a single dominant time-varying level (SVD share ≈ 0.98) with a roughly constant multiplicative gain from added model capacity, and a distinct pattern for mega-cap stocks.</p>
+</div>
+</div>
+</div>
+
+<div class="info-overlay" id="modal-yield">
+<div class="info-box">
+<div class="info-box-header">
+<p class="info-box-title">Yield Curve Forecaster</p>
+<button type="button" class="info-box-close" aria-label="Close">&times;</button>
+</div>
+<div class="info-box-body">
+<p>A quantitative fixed-income analytics toolkit for visualizing, forecasting, and analyzing treasury yields using advanced econometric models. Features Nelson-Siegel-Svensson curve fitting and dynamic term structure analysis.</p>
+</div>
+</div>
+</div>
+
+<div class="info-overlay" id="modal-macro">
+<div class="info-box">
+<div class="info-box-header">
+<p class="info-box-title">Macro Drivers of S&amp;P 500</p>
+<button type="button" class="info-box-close" aria-label="Close">&times;</button>
+</div>
+<div class="info-box-body">
+<p>A comprehensive econometric analysis identifying key macroeconomic drivers of S&amp;P 500 returns using Boruta feature selection and multiple regression modeling. Explores non-linear relationships and provides robust statistical inference.</p>
+</div>
+</div>
+</div>
+
+<script>
+(function () {
+  function closeOverlay(el) {
+    el.classList.remove('is-open');
+  }
+  function openOverlay(el) {
+    document.querySelectorAll('.info-overlay.is-open').forEach(closeOverlay);
+    el.classList.add('is-open');
+  }
+  document.querySelectorAll('.read-more-link[data-modal-target]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const target = document.querySelector(btn.getAttribute('data-modal-target'));
+      if (target) openOverlay(target);
+    });
+  });
+  document.querySelectorAll('.info-overlay').forEach(function (overlay) {
+    overlay.addEventListener('click', function (event) {
+      if (event.target === overlay) closeOverlay(overlay);
+    });
+    const closeBtn = overlay.querySelector('.info-box-close');
+    if (closeBtn) closeBtn.addEventListener('click', function () { closeOverlay(overlay); });
+  });
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      document.querySelectorAll('.info-overlay.is-open').forEach(closeOverlay);
+    }
+  });
+})();
+</script>

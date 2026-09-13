@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Projects – Emil Blaignan</title>
+<title>Research – Emil Blaignan</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -94,16 +94,16 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog/index.html"> 
-<span class="menu-text">Blog</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link active" href="./projects.html" aria-current="page"> 
-<span class="menu-text">Projects</span></a>
+<span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./cv.html"> 
 <span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./blog/index.html"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./personal.html"> 
@@ -132,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page">
-      <h1 class="title">Projects</h1>
+      <h1 class="title">Research</h1>
                       </div>
   </div>
     
@@ -278,13 +278,99 @@ ul.task-list li input[type="checkbox"] {
   color: var(--dark-text);
   font-size: 0.9rem;  /* Slightly reduced from 0.95rem */
   line-height: 1.35;  /* Slightly tighter line height */
-  margin: 0.8rem 0;  /* Reduced margins */
+  margin: 0.8rem 0 0.3rem;  /* Reduced margins */
   display: -webkit-box;
   -webkit-line-clamp: 4;  /* Increased from 3 to show more text */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   flex: 1;
+}
+
+.read-more-link {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0 0 0.6rem;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: center;
+}
+
+.read-more-link:hover {
+  opacity: 0.6;
+}
+
+.info-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+}
+
+.info-overlay.is-open {
+  display: flex;
+}
+
+.info-box {
+  background-color: var(--bg, #fff);
+  color: var(--fg, #0a0a0a);
+  border: 1.5px solid var(--fg, #0a0a0a);
+  border-radius: 8px;
+  max-width: 520px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.info-box-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid var(--fg, #0a0a0a);
+}
+
+.info-box-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.info-box-close {
+  background: none;
+  border: none;
+  color: var(--fg, #0a0a0a);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.info-box-close:hover {
+  opacity: 0.6;
+}
+
+.info-box-body {
+  padding: 1.2rem;
+}
+
+.info-box-body p {
+  color: var(--fg, #0a0a0a);
+  line-height: 1.5;
+  margin: 0;
 }
 
 .button-container {
@@ -383,6 +469,77 @@ ul.task-list li input[type="checkbox"] {
   }
 }
 </style>
+<section id="research" class="level2">
+<h2 class="anchored" data-anchor-id="research">Research</h2>
+<p>At UCLA Anderson, I work on empirical asset pricing research with Valentin Haddad and Tyler Muir, focused on high-dimensional stochastic discount factor estimation and how model complexity affects the investment opportunity set. Selected notes below.</p>
+</section>
+<div class="grid">
+<div class="g-col-12 g-col-md-6 g-col-lg-4">
+<div class="card">
+<section id="a-variance-hierarchy-ablation-of-the-kns-estimator" class="level2 card-header">
+<h2 class="anchored" data-anchor-id="a-variance-hierarchy-ablation-of-the-kns-estimator">A Variance-Hierarchy Ablation of the KNS Estimator</h2>
+</section>
+<div class="card-body">
+<div class="card-content">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="kns_thumbnail.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div class="tags-container">
+<p><span class="tag">PYTHON</span> <span class="tag">ASSET PRICING</span> <span class="tag">RIDGE REGULARIZATION</span></p>
+</div>
+<div class="card-description">
+<p>Ablation of the Kozak-Nagel-Santosh SDF estimator testing how much its cross-sectional pricing power depends on the covariance eigenvalue hierarchy. A partial-whitening continuum isolates finite-sample regularization from the population Sharpe ratio: whitening leaves the maximal Sharpe ratio invariant, but original-space CV R² collapses from 26.35% to 10.36% as the spectrum flattens, showing the variance hierarchy is load-bearing for the linear ridge estimator.</p>
+</div>
+<button type="button" class="read-more-link" data-modal-target="#modal-kns">
+Read more
+</button>
+</div>
+<div class="button-container">
+<p><a href="KNS_ablation_note.pdf" class="btn btn-dark" target="_blank" rel="noopener noreferrer">PDF Notes</a></p>
+</div>
+</div>
+<div class="card-footer">
+<p>May 2026</p>
+</div>
+</div>
+</div>
+<div class="g-col-12 g-col-md-6 g-col-lg-4">
+<div class="card">
+<section id="ckms-replication-and-a-complexity-sweep-of-the-maximal-sharpe-ratio" class="level2 card-header green">
+<h2 class="anchored" data-anchor-id="ckms-replication-and-a-complexity-sweep-of-the-maximal-sharpe-ratio">CKMS Replication and a Complexity Sweep of the Maximal Sharpe Ratio</h2>
+</section>
+<div class="card-body">
+<div class="card-content">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ckms_thumbnail.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div class="tags-container">
+<p><span class="tag green">PYTHON</span> <span class="tag green">RANDOM FEATURES</span> <span class="tag green">RIDGE REGRESSION</span></p>
+</div>
+<div class="card-description">
+<p>Replicates the CKMS bound on the population maximal Sharpe ratio on a rebuilt JKP equity pipeline, then runs a rolling complexity sweep from 121 linear characteristics to 5,000 random nonlinear features across 517 rolling 240-month windows. Finds a single dominant time-varying level (SVD share ≈ 0.98) with a roughly constant multiplicative gain from added model capacity, and a distinct pattern for mega-cap stocks.</p>
+</div>
+<button type="button" class="read-more-link" data-modal-target="#modal-ckms">
+Read more
+</button>
+</div>
+<div class="button-container">
+<p><a href="ckms_notes.pdf" class="btn btn-green" target="_blank" rel="noopener noreferrer">PDF Notes</a></p>
+</div>
+</div>
+<div class="card-footer">
+<p>September 2026</p>
+</div>
+</div>
+</div>
+</div>
+<section id="projects" class="level2">
+<h2 class="anchored" data-anchor-id="projects">Projects</h2>
+</section>
 <div class="grid">
 <div class="g-col-12 g-col-md-6 g-col-lg-4">
 <div class="card">
@@ -402,6 +559,9 @@ ul.task-list li input[type="checkbox"] {
 <div class="card-description">
 <p>A quantitative fixed-income analytics toolkit for visualizing, forecasting, and analyzing treasury yields using advanced econometric models. Features Nelson-Siegel-Svensson curve fitting and dynamic term structure analysis.</p>
 </div>
+<button type="button" class="read-more-link" data-modal-target="#modal-yield">
+Read more
+</button>
 </div>
 <div class="button-container">
 <p><a href="https://github.com/emilblaignan/YieldCurveForecaster" class="btn btn-dark" target="_blank" rel="noopener noreferrer">GitHub</a></p>
@@ -430,6 +590,9 @@ ul.task-list li input[type="checkbox"] {
 <div class="card-description">
 <p>A comprehensive econometric analysis identifying key macroeconomic drivers of S&amp;P 500 returns using Boruta feature selection and multiple regression modeling. Explores non-linear relationships and provides robust statistical inference.</p>
 </div>
+<button type="button" class="read-more-link" data-modal-target="#modal-macro">
+Read more
+</button>
 </div>
 <div class="button-container">
 <p><a href="https://github.com/emilblaignan/Macro-Drivers" class="btn btn-green" target="_blank" rel="noopener noreferrer">GitHub</a> <a href="Report.pdf" class="btn btn-green" target="_blank" rel="noopener noreferrer">PDF Report</a></p>
@@ -442,6 +605,103 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <!-- You can add more cards here in the same pattern -->
 </div>
+<div id="modal-kns" class="info-overlay">
+<div class="info-box">
+<div class="info-box-header">
+<p class="info-box-title">
+A Variance-Hierarchy Ablation of the KNS Estimator
+</p>
+<button type="button" class="info-box-close" aria-label="Close">
+×
+</button>
+</div>
+<div class="info-box-body">
+<p>
+Ablation of the Kozak-Nagel-Santosh SDF estimator testing how much its cross-sectional pricing power depends on the covariance eigenvalue hierarchy. A partial-whitening continuum isolates finite-sample regularization from the population Sharpe ratio: whitening leaves the maximal Sharpe ratio invariant, but original-space CV R² collapses from 26.35% to 10.36% as the spectrum flattens, showing the variance hierarchy is load-bearing for the linear ridge estimator.
+</p>
+</div>
+</div>
+</div>
+<div id="modal-ckms" class="info-overlay">
+<div class="info-box">
+<div class="info-box-header">
+<p class="info-box-title">
+CKMS Replication and a Complexity Sweep of the Maximal Sharpe Ratio
+</p>
+<button type="button" class="info-box-close" aria-label="Close">
+×
+</button>
+</div>
+<div class="info-box-body">
+<p>
+Replicates the CKMS bound on the population maximal Sharpe ratio on a rebuilt JKP equity pipeline, then runs a rolling complexity sweep from 121 linear characteristics to 5,000 random nonlinear features across 517 rolling 240-month windows. Finds a single dominant time-varying level (SVD share ≈ 0.98) with a roughly constant multiplicative gain from added model capacity, and a distinct pattern for mega-cap stocks.
+</p>
+</div>
+</div>
+</div>
+<div id="modal-yield" class="info-overlay">
+<div class="info-box">
+<div class="info-box-header">
+<p class="info-box-title">
+Yield Curve Forecaster
+</p>
+<button type="button" class="info-box-close" aria-label="Close">
+×
+</button>
+</div>
+<div class="info-box-body">
+<p>
+A quantitative fixed-income analytics toolkit for visualizing, forecasting, and analyzing treasury yields using advanced econometric models. Features Nelson-Siegel-Svensson curve fitting and dynamic term structure analysis.
+</p>
+</div>
+</div>
+</div>
+<div id="modal-macro" class="info-overlay">
+<div class="info-box">
+<div class="info-box-header">
+<p class="info-box-title">
+Macro Drivers of S&amp;P 500
+</p>
+<button type="button" class="info-box-close" aria-label="Close">
+×
+</button>
+</div>
+<div class="info-box-body">
+<p>
+A comprehensive econometric analysis identifying key macroeconomic drivers of S&amp;P 500 returns using Boruta feature selection and multiple regression modeling. Explores non-linear relationships and provides robust statistical inference.
+</p>
+</div>
+</div>
+</div>
+<script>
+(function () {
+  function closeOverlay(el) {
+    el.classList.remove('is-open');
+  }
+  function openOverlay(el) {
+    document.querySelectorAll('.info-overlay.is-open').forEach(closeOverlay);
+    el.classList.add('is-open');
+  }
+  document.querySelectorAll('.read-more-link[data-modal-target]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const target = document.querySelector(btn.getAttribute('data-modal-target'));
+      if (target) openOverlay(target);
+    });
+  });
+  document.querySelectorAll('.info-overlay').forEach(function (overlay) {
+    overlay.addEventListener('click', function (event) {
+      if (event.target === overlay) closeOverlay(overlay);
+    });
+    const closeBtn = overlay.querySelector('.info-box-close');
+    if (closeBtn) closeBtn.addEventListener('click', function () { closeOverlay(overlay); });
+  });
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      document.querySelectorAll('.info-overlay.is-open').forEach(closeOverlay);
+    }
+  });
+})();
+</script>
 
 
 
